@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, MapPin, Menu, X } from 'lucide-react'
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, MapPin, Menu, X } from 'lucide-react' 
 
 // const stories = [
 //   {
