@@ -332,6 +332,330 @@ function VisitSection() {
   )
 }
 
+// function DirectionsSection() {
+//   return (
+//     <section className="bg-[#f7eedb] py-24 px-8 md:px-[8%] border-t border-[#d9d0bc]" id="directions">
+//       <div className="max-w-[1000px] mx-auto">
+//         <h2 className="text-4xl md:text-5xl font-serif text-[#2c493c] text-center mb-16">How to Get Here</h2>
+        
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
+          
+//           {/* Left Column: Details & Map */}
+//           <div className="flex flex-col gap-10 md:border-r border-[#d9d0bc] md:pr-16 text-center md:text-right">
+//             <div>
+//               <h3 className="font-serif text-xl text-[#2c493c] mb-4">Physical Address</h3>
+//               <p className="text-[#605b50] text-sm leading-relaxed font-serif italic">
+//                 Aamchi Bhui Eco-Retreat<br />
+//                 Olaulim, Bardez<br />
+//                 Goa 403523<br />
+//                 India
+//               </p>
+//             </div>
+            
+//             <div>
+//               <h3 className="font-serif text-xl text-[#2c493c] mb-4">GPS Coordinates</h3>
+//               <p className="text-[#605b50] text-sm leading-relaxed font-serif italic">
+//                 15°35&apos;30.6&quot;N 73°51&apos;49.1&quot;E<br />
+//                 <span className="text-[11px] not-italic tracking-wider uppercase mt-1 block">Approximate Center</span>
+//               </p>
+//             </div>
+
+//             <div className="flex flex-col items-center md:items-end mt-4">
+//               <h3 className="font-serif text-xl text-[#2c493c] mb-4">Where to Park</h3>
+//               <p className="text-[#605b50] text-sm leading-relaxed mb-6 font-serif italic">
+//                 Complimentary parking is available<br />just inside the main estate gates.
+//               </p>
+//               {/* Map Image matching the reference screenshot */}
+//               <div className="relative w-[280px] h-[180px] rounded-lg overflow-hidden border-2 border-[#d9d0bc] shadow-sm hover:shadow-md transition-shadow">
+//                  <Image 
+//                    src="/map_aamchi-bhui.jpeg" 
+//                    alt="Route map from Panaji to Olaulim" 
+//                    fill 
+//                    style={{ objectFit: 'cover', objectPosition: 'center' }} 
+//                  />
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Right Column: Step-by-Step Directions */}
+//           <div className="flex flex-col gap-8 md:pl-16">
+//             <h3 className="font-serif text-2xl text-[#2c493c] mb-2 border-b border-[#d9d0bc] pb-4">Directions</h3>
+            
+//             <div>
+//               <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Air</h4>
+//               <p className="text-[#605b50] text-sm leading-relaxed">
+//                 Fly into Manohar International Airport (Mopa) or Dabolim Airport. Pre-paid airport taxis are available at both terminals for a direct route to Olaulim.
+//               </p>
+//             </div>
+
+//             <div>
+//               <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Train</h4>
+//               <p className="text-[#605b50] text-sm leading-relaxed">
+//                 The closest major railway station is Thivim (approx. 25 minutes away). Karmali station is also a convenient option depending on your inbound route.
+//               </p>
+//             </div>
+
+//             <div>
+//               <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Car (From Panaji)</h4>
+//               <p className="text-[#605b50] text-sm leading-relaxed">
+//                 Follow NH66 northwards across the Mandovi River towards Porvorim. Take a right turn towards Salvador do Mundo, and follow Route 12 along the backwaters directly into Olaulim. Please follow the wooden signs to the estate entrance.
+//               </p>
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+function DirectionsSection() {
+  return (
+    <section className="bg-[#f7eedb] py-24 px-8 md:px-[8%] border-t border-[#d9d0bc]" id="directions">
+      <div className="max-w-[1200px] mx-auto">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          
+          {/* Left Column: Big Map */}
+          <div className="relative w-full h-[400px] lg:h-[750px] rounded-2xl overflow-hidden border-2 border-[#d9d0bc] shadow-[8px_8px_0px_rgba(83,92,64,0.1)]">
+             <Image 
+               src="/map_aamchi-bhui.jpeg" 
+               alt="Route map from Panaji to Olaulim" 
+               fill 
+               style={{ objectFit: 'cover', objectPosition: 'center' }} 
+               sizes="(max-width: 1024px) 100vw, 50vw"
+             />
+          </div>
+
+          {/* Right Column: All Content */}
+          <div className="flex flex-col py-4">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#2c493c] mb-12">How to Get Here</h2>
+            
+            {/* Address & GPS Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10 pb-10 border-b border-[#d9d0bc]">
+              <div>
+                <h3 className="font-serif text-xl text-[#2c493c] mb-4">Physical Address</h3>
+                <p className="text-[#605b50] text-sm leading-relaxed font-serif italic">
+                  Aamchi Bhui Eco-Retreat<br />
+                  Olaulim, Bardez<br />
+                  Goa 403523<br />
+                  India
+                </p>
+              </div>
+              
+              <div className="flex flex-col gap-6">
+                <div>
+                  <h3 className="font-serif text-xl text-[#2c493c] mb-2">GPS Coordinates</h3>
+                  <p className="text-[#605b50] text-sm leading-relaxed font-serif italic">
+                    15°35&apos;30.6&quot;N 73°51&apos;49.1&quot;E<br />
+                    <span className="text-[11px] not-italic tracking-wider uppercase mt-1 block">Approximate Center</span>
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl text-[#2c493c] mb-2">Where to Park</h3>
+                  <p className="text-[#605b50] text-sm leading-relaxed font-serif italic">
+                    Complimentary parking is available<br />just inside the main estate gates.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Directions */}
+            <div className="flex flex-col gap-8">
+              <h3 className="font-serif text-2xl text-[#2c493c] mb-2">Directions</h3>
+              
+              <div>
+                <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Air</h4>
+                <p className="text-[#605b50] text-sm leading-relaxed">
+                  Fly into Manohar International Airport (Mopa) or Dabolim Airport. Pre-paid airport taxis are available at both terminals for a direct route to Olaulim.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Train</h4>
+                <p className="text-[#605b50] text-sm leading-relaxed">
+                  The closest major railway station is Thivim (approx. 25 minutes away). Karmali station is also a convenient option depending on your inbound route.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-[#171b16] mb-2 font-serif text-lg">By Car (From Panaji)</h4>
+                <p className="text-[#605b50] text-sm leading-relaxed">
+                  Follow NH66 northwards across the Mandovi River towards Porvorim. Take a right turn towards Salvador do Mundo, and follow Route 12 along the backwaters directly into Olaulim. Please follow the wooden signs to the estate entrance.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// function ReviewsSection() {
+//   const reviews = [
+//     {
+//       name: "Priya & Rohan",
+//       location: "Mumbai",
+//       text: "Aamchi Bhui is a slice of paradise. The mud cottages are beautifully crafted, and waking up to the sound of the backwaters was exactly the reset we needed. The traditional Goan thali was unforgettable.",
+//       rating: 5
+//     },
+//     {
+//       name: "Sarah Jenkins",
+//       location: "London",
+//       text: "An incredibly authentic experience. We loved the pottery workshop and the guided nature trails. It's rare to find a place that balances sustainability with such warm, effortless hospitality.",
+//       rating: 5
+//     },
+//     {
+//       name: "The Sharma Family",
+//       location: "Delhi",
+//       text: "The perfect escape from the city. Our kids loved exploring the organic farm and the butterfly garden. Amisha and the team went above and beyond to make us feel like old friends.",
+//       rating: 5
+//     }
+//   ]
+
+//   return (
+//     <section className="bg-[#fff9eb] py-24 px-8 md:px-[8%] border-t border-[#d9d0bc]" id="reviews">
+//       <div className="max-w-[1200px] mx-auto">
+        
+//         <div className="text-center mb-16">
+//           <p className="eyebrow flex items-center justify-center gap-2 mb-4 text-[#6b6556] text-[10px] font-bold tracking-[.17em]">
+//             <span className="w-2 h-2 bg-[#a2391e] rounded-full" /> GUEST STORIES
+//           </p>
+//           <h2 className="text-4xl md:text-5xl font-serif text-[#2c493c]">Kind Words</h2>
+//         </div>
+        
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+//           {reviews.map((review, i) => (
+//             <div key={i} className="bg-white p-8 rounded-2xl border border-[#d9d0bc] shadow-[4px_4px_0px_rgba(83,92,64,0.05)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+//               <div>
+//                 <div className="text-[#a2391e] mb-6 text-sm tracking-widest" aria-label={`${review.rating} out of 5 stars`}>
+//                   {'★'.repeat(review.rating)}
+//                 </div>
+//                 <p className="font-serif italic text-[#605b50] leading-relaxed mb-8 text-lg">
+//                   &quot;{review.text}&quot;
+//                 </p>
+//               </div>
+//               <div className="border-t border-[#d9d0bc] pt-5">
+//                 <p className="font-bold text-[#171b16] text-sm uppercase tracking-wide">{review.name}</p>
+//                 <p className="text-xs text-[#a5a894] mt-1 uppercase tracking-wider">{review.location}</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//       </div>
+//     </section>
+//   )
+// }
+
+export function ReviewsSection() {
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
+
+  const reviews = [
+    {
+      name: "Priya & Rohan",
+      location: "Mumbai",
+      text: "Aamchi Bhui is a slice of paradise. The mud cottages are beautifully crafted, and waking up to the sound of the backwaters was exactly the reset we needed. The traditional Goan thali was unforgettable.",
+      rating: 5
+    },
+    {
+      name: "Sarah Jenkins",
+      location: "London",
+      text: "An incredibly authentic experience. We loved the pottery workshop and the guided nature trails. It's rare to find a place that balances sustainability with such warm, effortless hospitality.",
+      rating: 5
+    },
+    {
+      name: "The Sharma Family",
+      location: "Delhi",
+      text: "The perfect escape from the city. Our kids loved exploring the organic farm and the butterfly garden. Amisha and the team went above and beyond to make us feel like old friends.",
+      rating: 5
+    }
+  ]
+
+  return (
+    <>
+      <section className="bg-[#fff9eb] py-24 px-8 md:px-[8%] border-t border-[#d9d0bc]" id="reviews">
+        <div className="max-w-[1200px] mx-auto">
+          
+          <div className="text-center mb-16">
+            <p className="eyebrow flex items-center justify-center gap-2 mb-4 text-[#6b6556] text-[10px] font-bold tracking-[.17em]">
+              <span className="w-2 h-2 bg-[#a2391e] rounded-full" /> GUEST STORIES
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-[#2c493c]">Kind Words</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {reviews.map((review, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl border border-[#d9d0bc] shadow-[4px_4px_0px_rgba(83,92,64,0.05)] flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                <div>
+                  <div className="text-[#a2391e] mb-6 text-sm tracking-widest" aria-label={`${review.rating} out of 5 stars`}>
+                    {'★'.repeat(review.rating)}
+                  </div>
+                  <p className="font-serif italic text-[#605b50] leading-relaxed mb-8 text-lg">
+                    &quot;{review.text}&quot;
+                  </p>
+                </div>
+                <div className="border-t border-[#d9d0bc] pt-5">
+                  <p className="font-bold text-[#171b16] text-sm uppercase tracking-wide">{review.name}</p>
+                  <p className="text-xs text-[#a5a894] mt-1 uppercase tracking-wider">{review.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <button 
+              className="bg-[#a2391e] text-[#fff9eb] py-3 px-8 rounded-md font-bold text-sm hover:opacity-90 transition-opacity"
+              onClick={() => setIsReviewModalOpen(true)}
+            >
+              Leave a Review
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Review Modal Overlay */}
+      {isReviewModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#171b16]/40 backdrop-blur-sm" onClick={() => setIsReviewModalOpen(false)}>
+          <div className="bg-[#fff9eb] rounded-xl p-8 max-w-md w-full relative shadow-2xl border border-[#d9d0bc] animate-in fade-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+            <button 
+              className="absolute top-4 right-4 text-[#a5a894] hover:text-[#a2391e] transition-colors" 
+              onClick={() => setIsReviewModalOpen(false)}
+              aria-label="Close form"
+            >
+              <X size={20} />
+            </button>
+            
+            <h3 className="text-3xl font-serif text-[#2c493c] mb-2">Leave a Review</h3>
+            <p className="text-sm text-[#605b50] mb-6 font-serif italic">Share your experience at Aamchi Bhui.</p>
+            
+            <form className="flex flex-col gap-4" action="mailto:hello@aamchibhui.com?subject=New%20Guest%20Review" method="POST" encType="text/plain">
+              <input type="text" name="Name" placeholder="Your Name" className="w-full p-3 bg-white border border-[#d9d0bc] rounded-md focus:outline-none focus:border-[#a2391e] focus:ring-1 focus:ring-[#a2391e] text-sm text-[#171b16]" required />
+              
+              <div className="flex gap-4">
+                <input type="text" name="Location" placeholder="City / Location" className="w-1/2 p-3 bg-white border border-[#d9d0bc] rounded-md focus:outline-none focus:border-[#a2391e] focus:ring-1 focus:ring-[#a2391e] text-sm text-[#171b16]" required />
+                <input type="number" name="Rating" placeholder="Rating (1-5)" min="1" max="5" className="w-1/2 p-3 bg-white border border-[#d9d0bc] rounded-md focus:outline-none focus:border-[#a2391e] focus:ring-1 focus:ring-[#a2391e] text-sm text-[#171b16]" required />
+              </div>
+              
+              <textarea name="Review" placeholder="Tell us about your stay..." rows={4} className="w-full p-3 bg-white border border-[#d9d0bc] rounded-md focus:outline-none focus:border-[#a2391e] focus:ring-1 focus:ring-[#a2391e] text-sm text-[#171b16] resize-none" required></textarea>
+              
+              <div className="mt-2 text-center">
+                <button type="submit" className="w-full bg-[#a2391e] text-[#fff9eb] py-3 rounded-md font-bold text-sm hover:opacity-90 transition-opacity mb-3">
+                  Submit Review
+                </button>
+                <p className="text-xs text-[#605b50] font-serif italic">Thank you for sharing your story.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -351,6 +675,8 @@ export default function HeritageSite() {
       <IntroSection />
       <TraditionsSection />
       <VisitSection />
+      <DirectionsSection />
+      <ReviewsSection />
       <SiteFooter />
     </main>
   )
