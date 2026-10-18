@@ -200,7 +200,7 @@ function Hero() {
           <Link className="button button-dark" href="#traditions">Explore our heritage <ArrowRight size={16} /></Link>
           <Link className="text-link" href="#story">Get to know us <ArrowDown size={15} /></Link>
         </div>
-        <div className="hero-footnote"><span className="footnote-rule" /> Rooted in Loutolim, Goa <span className="footnote-dot">✳</span> Open to all</div>
+        <div className="hero-footnote"><span className="footnote-rule" /> Rooted in Bardez, Goa <span className="footnote-dot">✳</span> Open to all</div>
       </div>
       <div className="hero-visual">
         <div className="hero-photo-frame">
