@@ -194,7 +194,7 @@ function Hero() {
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-copy">
         <p className="eyebrow"><span className="eyebrow-dot" /> A LIVING MUSEUM OF GOA</p>
-        <h1 id="hero-title">Stories shaped<br />by <em>soil, sea</em><br />&amp; song.</h1>
+        <h1 id="hero-title">Stories shaped<br />by <em>soil, sea</em><br />&amp; culture.</h1>
         <p className="hero-intro">Step into the colours, craft and everyday magic of Goa — kept alive by the people who call it home.</p>
         <div className="hero-actions">
           <Link className="button button-dark" href="#traditions">Explore our heritage <ArrowRight size={16} /></Link>
